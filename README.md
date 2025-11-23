@@ -58,7 +58,7 @@ Since this project is built in a Jupyter Notebook (specifically optimized for Go
 
 ## **3) Open the Project:**
 
-- Upload Vithyarthi Project.ipynb to Google Colab.
+- Upload Vithyarthi Project.ipynb(name of your project) to Google Colab.
 
 ## **4) Run the Notebook:**
 
