@@ -7,30 +7,30 @@ Manual interpretation of brain MRI scans is time-consuming and can be subjective
 
 ##  🎯 2. Scope of the Project
 
-* **✅ 2.1. In Scope (Deliverables):**
-- Data preparation and augmentation pipeline using `ImageDataGenerator` to improve generalization on limited datasets.
-- Model development and comparison using transfer learning (VGG16 and ResNet50 backbones) with a custom classification head.
-- Training, validation, and evaluation (accuracy and loss reporting) on labeled MR images organized in directory structure.
+ **✅ 2.1. In Scope (Deliverables):**
+  * **Data preparation and augmentation pipeline using `Image Data Generator` to improve generalization on limited datasets.** 
+  * **Model development and comparison using Transfer Learning (specifically VGG16 and ResNet50 backbones) with a custom classification head.** 
+  * **Training, validation, and comprehensive evaluation (accuracy and loss reporting) on labeled MR images organized in a directory structure.** 
 
-* **🚫 2.2. Out of Scope (Exclusions):**
-- Clinical deployment, integration with hospital PACS, or regulatory approval workflows.
-- Pixel-level tasks such as segmentation or bounding-box detection — this project focuses on whole-image classification.
-- Support for other imaging modalities (CT, X-ray) unless explicitly extended.
+ **🚫 2.2. Out of Scope (Exclusions):**
+  * **Clinical deployment, integration with hospital PACS, or regulatory approval workflows.** 
+  * **Pixel-level tasks such as segmentation or bounding-box detection (this project focuses solely on whole-image classification).**  
+  * **Support for other imaging modalities (e.g., CT, X-ray) unless explicitly extended in future phases.** 
 
-● Target users
+ ## 🧑‍⚕️ 3. Target Users
+ * **Radiologists: receive a fast, automated second opinion to prioritize and triage cases.** 
+ * **Neurologists / Oncologists: obtain quick preliminary classifications to inform further diagnostics and treatment planning.**
+ * **Medical researchers: use the codebase and trained models as a reproducible baseline for experimentation and improvement.**  
+ * **Medical students / educators: use the models and visualizations as teaching aids for MRI pattern recognition.** 
+  
 
-- Radiologists: receive a fast, automated second opinion to prioritize and triage cases.
-- Neurologists / Oncologists: obtain quick preliminary classifications to inform further diagnostics and treatment planning.
-- Medical researchers: use the codebase and trained models as a reproducible baseline for experimentation and improvement.
-- Medical students / educators: use the models and visualizations as teaching aids for MRI pattern recognition.
+## ✨ 4. High-Level Features
 
-● High-level features
+* **Four-class classification: accepts an MRI image (224×224 RGB) and outputs probabilities for {Glioma, Meningioma, Pituitary, No Tumor}.**
+* **Transfer learning backbone: VGG16 and ResNet50 pretrained on ImageNet with a frozen base and a small trainable classification head.**
+* **Data augmentation: on-the-fly image augmentation (rotation, width/height shifts, zoom, horizontal flip) to reduce overfitting.**
+* **Training & evaluation: training scripts/notebook that log accuracy and validation accuracy, plot training histories, and evaluate final models with `model.evaluate().**
 
-- Four-class classification: accepts an MRI image (224×224 RGB) and outputs probabilities for {Glioma, Meningioma, Pituitary, No Tumor}.
-- Transfer learning backbone: VGG16 and ResNet50 pretrained on ImageNet with a frozen base and a small trainable classification head.
-- Data augmentation: on-the-fly image augmentation (rotation, width/height shifts, zoom, horizontal flip) to reduce overfitting.
-- Training & evaluation: training scripts/notebook that log accuracy and validation accuracy, plot training histories, and evaluate final models with `model.evaluate()`.
-
-Notes
-- This project is intended as a research/educational prototype and not as a clinical diagnostic tool. Any clinical use would require extensive validation, regulatory approval, and integration with clinical workflows.
+## ⚠️ Important Note
+* **This project is intended as a research/educational prototype and not as a clinical diagnostic tool. Any clinical use would require extensive validation, regulatory approval, and integration with clinical workflows.**
 
