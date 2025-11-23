@@ -7,12 +7,12 @@ Manual interpretation of brain MRI scans is time-consuming and can be subjective
 
 ##  🎯 2. Scope of the Project
 
-✅ 2.1. In Scope (Deliverables)
+* **✅ 2.1. In Scope (Deliverables):**
 - Data preparation and augmentation pipeline using `ImageDataGenerator` to improve generalization on limited datasets.
 - Model development and comparison using transfer learning (VGG16 and ResNet50 backbones) with a custom classification head.
 - Training, validation, and evaluation (accuracy and loss reporting) on labeled MR images organized in directory structure.
 
-Out of scope:
+* **🚫 2.2. Out of Scope (Exclusions):**
 - Clinical deployment, integration with hospital PACS, or regulatory approval workflows.
 - Pixel-level tasks such as segmentation or bounding-box detection — this project focuses on whole-image classification.
 - Support for other imaging modalities (CT, X-ray) unless explicitly extended.
